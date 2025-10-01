@@ -98,7 +98,7 @@ func (i *Impl) Run(ctx context.Context, args []string) error {
 	lastPrint := ""
 	for {
 		select {
-		case <-time.Tick(time.Millisecond * 100):
+		case <-time.Tick(time.Millisecond * 10):
 			difference := time.Until(finish)
 
 			if difference < 0 {

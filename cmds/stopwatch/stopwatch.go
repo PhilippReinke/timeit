@@ -54,7 +54,7 @@ func (i *Impl) Run(ctx context.Context, args []string) error {
 	lastPrint := ""
 	for {
 		select {
-		case <-time.Tick(time.Millisecond * 100):
+		case <-time.Tick(time.Millisecond * 10):
 			elapsed := time.Since(start)
 			h := elapsed / time.Hour
 			m := (elapsed % time.Hour) / time.Minute
